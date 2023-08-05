@@ -1,5 +1,6 @@
 const currentDate = new Date();
 const minDate = new Date();
+const maxDate = new Date();
 
 minDate.setFullYear(currentDate.getFullYear() - 55);
 minDate.setDate(minDate.getDate() + 1);
@@ -7,7 +8,7 @@ maxDate.setFullYear(currentDate.getFullYear() - 18);
 maxDate.setDate(maxDate.getDate() + 1);
 
 document.getElementById("dob").setAttribute("min", minDate.toISOString().split('T')[0]);
-document.getElementById("dob").setAttribute("max", currentDate.toISOString().split('T')[0]);
+document.getElementById("dob").setAttribute("max", maxDate.toISOString().split('T')[0]);
 
 if (localStorage.getItem("Names") == null) {
     localStorage.setItem("Names", "[]");
